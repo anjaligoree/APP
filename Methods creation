@@ -1,8 +1,7 @@
-# Dynamic Report Generator using Decorators, Class Methods, and Magic Methods
+
 
 from datetime import datetime
 
-# ---------------- Decorator ----------------
 def report_header_footer(func):
     """Decorator to add header and footer to the report."""
     def wrapper(*args, **kwargs):
@@ -16,7 +15,6 @@ def report_header_footer(func):
     return wrapper
 
 
-# ---------------- Report Class ----------------
 class Report:
 
     # Class Variable
@@ -60,12 +58,9 @@ class Report:
         print(f"Total Reports Created: {cls.report_count}")
 
 
-# ---------------- Main Program ----------------
-
-# Create Report
 report = Report("Student Performance Report", "Umar Mulani")
 
-# Add Sections
+
 report.add_section(
     "Introduction",
     "This report summarizes the academic performance of students."
